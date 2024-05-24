@@ -10,7 +10,8 @@ public class Frecuencias {
       
         }
         for (HashMap.Entry<Character, Integer> entry : charFrequencies.entrySet()) {
-            System.out.println("'" + entry.getKey() + "': " + entry.getValue());
+            System.out.print("'" + entry.getKey() + "': " + entry.getValue() +"\t");
         }
+        System.out.println();
     }
 }

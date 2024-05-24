@@ -50,6 +50,30 @@ public class Lab02 {
         System.out.println("Resultado es " +  (descifradoVignere.equals(resultadoEsperado) ? "correcto" : "incorrecto"));
         System.out.println(); 
 
+        //Muestra las frecuencias de cada letra del mensaje original usando como claves MALEFICIO, HUMOR y MAR,
+        System.out.println("Cifrado Vignere modulo 27 clave MALEFICIO");
+        cifradoVignere = Vignere.algoritmoVignere(readFileAsString("./tests/VignereText.txt"), 
+            "MALEFICIO" );
+        System.out.println("Resultado de cifrado Vignere " + cifradoVignere);
+        Frecuencias.countCharacterFrequencies(cifradoVignere);
+        System.out.println();
+        
+        //Muestra las frecuencias de cada letra del mensaje original usando como claves MALEFICIO, HUMOR y MAR,
+        System.out.println("Cifrado Vignere modulo 27 clave HUMOR");
+        cifradoVignere = Vignere.algoritmoVignere(readFileAsString("./tests/VignereText.txt"), 
+            "HUMOR" );
+        System.out.println("Resultado de cifrado Vignere " + cifradoVignere);
+        Frecuencias.countCharacterFrequencies(cifradoVignere);
+        System.out.println();
+
+        //Muestra las frecuencias de cada letra del mensaje original usando como claves MALEFICIO, HUMOR y MAR,
+        System.out.println("Cifrado Vignere modulo 27 clave MAR");
+        cifradoVignere = Vignere.algoritmoVignere(readFileAsString("./tests/VignereText.txt"), 
+            "MAR" );
+        System.out.println("Resultado de cifrado Vignere " + cifradoVignere);
+        Frecuencias.countCharacterFrequencies(cifradoVignere);
+        System.out.println();
+       
         // Descifrado Autoclave 27
         System.out.println("Descifrado Autoclave modulo 27");
         CifradoAutoclave candado = new CifradoAutoclave();
